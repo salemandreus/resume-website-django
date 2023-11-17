@@ -34,5 +34,3 @@ def portfolio(request):
 def contact(request):
     context = {"title": "Welcome to my Resumé Website!"}
     return render(request, "contact-me.html", context)
-
-
