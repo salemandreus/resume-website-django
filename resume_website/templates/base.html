@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang = en-us>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta property="og:image" content="https://salemandreus.github.io/images/SalemandreusDevLogo.png" /> <!--Todo: update -->
+<meta property="og:title" content="Salem Forsythe - Full-Stack Software Developer and Automation Engineer" />
+<meta property="og:description" content="I have worked in DevSecOps, Django/Python and other full-stack and back-end development and automation. My ideal career involves growth opportunities and my dream is to combine my Linguistics degree with AI and Machine Learning." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://salemandreus.github.io/" />
+<meta name="image" content="../../static/resume_website/images/SalemandreusDevLogo.png">
+<meta name="title" content="Salem Forsythe - Full-Stack Software Developer and Automation Engineer">
+<meta name="description" content="I have worked in DevSecOps, Django/Python and other full-stack and back-end development and automation. My ideal career involves growth opportunities and my dream is to combine my Linguistics degree with AI and Machine Learning.">
+<meta name="author" content="Salem Forsythe">
+<link href="../../static/resume_website/css/normalize.css" rel="stylesheet">
+<link href="../../static/resume_website/css/small.css" rel="stylesheet">
+<link href="../../static/resume_website/css/medium.css" rel="stylesheet">
+<link href="../../static/resume_website/css/large.css" rel="stylesheet">
+<title>Hire Salem Forsythe</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+<!-- HEADER -->
+<div id="headerWrapper">
+    <header>
+        <!-- NAVIGATION -->
+        <div id="navWrapper">
+            <nav class="clearfix">
+                <button onclick="toggleMenu()">&#9776</button>
+                <ul id="primaryNav" class="hide">  <!-- block must be overwritten with active item -->
+                    {% block nav_items %}
+                    <li><a href="{% url 'welcome' %}"><span class="nav-text">Welcome!</span><figure class="logo"><img src="../../static/resume_website/images/Lizard.tiny-blue-active.png"></figure></a></li>
+                    <li><a href="{% url 'culture' %}"><span class="nav-text">Caring About Culture</span></a></li>
+                    <li><a href="{% url 'development' %}"><span class="nav-text">Passionate About Development</span></a></li>
+                    <li><a href="{% url 'devsecops' %}"><span class="nav-text">Driving DevSecOps</span></a></li>
+                    <li><a href="{% url 'community' %}"><span class="nav-text">Invested In Community</span></a></li>
+                    <li><a href="{% url 'portfolio' %}"><span class="nav-text">My Portfolio</span></a></li>
+                    <li><a href="{% url 'contact' %}"><span class="nav-text">Contact Me</span></a></li>
+                    {% endblock %}
+                </ul>
+            </nav>
+        </div>
+
+<!--- Content -->
+        <div id="headingsTopWrapper">
+            <h1>Hire Salem Forsythe</h1>
+            <h2>Software Developer and Automation Engineer</h2>
+        </div>
+    </header>
+</div>
+
+<!-- MAIN -->
+<div id="mainWrapper">
+    <main>
+        <!-- Page Content -->
+        {% block page_titles %}
+        <h1></h1>
+        {% endblock %}
+        <br>
+
+        {% block section_titles_1 %}
+        <h2></h2>
+        {% endblock %}
+
+        {% block section_1 %}
+        {% endblock %}
+
+            <!-- optional additional sections -->
+        {% block section_titles_2 %}
+        <h2></h2>
+        {% endblock %}
+
+        {% block section_2 %}
+        {% endblock %}
+
+        {% block section_titles_3 %}
+        {% endblock %}
+
+        {% block section_3 %}
+        {% endblock %}
+
+        <br>
+        <div class="call-to-action-block">
+            <p>Click below to learn more about: </p>
+            <div class="centred-block">
+                <ul class = centred-list-block> <!-- block not prepopulated because these MUST render differently per page - currently must not show current (active) page link! (And I want it to be obvious if it doesn't work) -->
+                    {% block cta_items %}
+                    {% endblock %}
+                </ul>
+            </div>
+            <br>
+            <ul id="cta-bottom-line" class="icon-and-text"> <!-- block not prepopulated because these MUST render differently per page - currently must not show current (active) page link! (And I want it to be obvious if it doesn't work) -->
+            {% block cta_line %}
+            {% endblock %}
+            </ul>
+        </div>
+    </main>
+</div>
+
+<!--- FOOTER -->
+<div id="footerWrapper">
+    <footer>
+        &copy; Salem Forsythe 2023
+    </footer>
+</div>
+<script src="../../static/resume_website/js/scripts.js"></script>
+</body>
+</html>

@@ -1,106 +1,59 @@
-<!DOCTYPE html>
-<html lang = en-us>
-<head>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta property="og:image" content="https://salemandreus.github.io/images/SalemandreusDevLogo.png" />
-<meta property="og:title" content="Salem Forsythe - Full-Stack Software Developer and Automation Engineer" />
-<meta property="og:description" content="I have worked in DevSecOps, Django/Python and other full-stack and back-end development and automation. My ideal career involves growth opportunities and my dream is to combine my Linguistics degree with AI and Machine Learning." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://salemandreus.github.io/" />
-<meta name="image" content="../../static/resume_website/images/SalemandreusDevLogo.png">
-<meta name="title" content="Salem Forsythe - Full-Stack Software Developer and Automation Engineer">
-<meta name="description" content="I have worked in DevSecOps, Django/Python and other full-stack and back-end development and automation. My ideal career involves growth opportunities and my dream is to combine my Linguistics degree with AI and Machine Learning.">
-<meta name="author" content="Salem Forsythe">
-<link href="../../static/resume_website/css/normalize.css" rel="stylesheet">
-<link href="../../static/resume_website/css/small.css" rel="stylesheet">
-<link href="../../static/resume_website/css/medium.css" rel="stylesheet">
-<link href="../../static/resume_website/css/large.css" rel="stylesheet">
-<title>Hire Salem Forsythe</title>
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
+{% extends "base.html" %}
 
-<body>
-<!-- HEADER -->
-<div id="headerWrapper">
-    <header>
+{% block nav_items %}
+    <li><a href="{% url 'welcome' %}"><span class="nav-text">Welcome!</span><figure class="logo"><img src="../../static/resume_website/images/Lizard.tiny-purple.png"></figure></a></li>
+    <li><a href="{% url 'culture' %}"><span class="nav-text">Caring About Culture</span></a></li>
+    <li><a href="{% url 'development' %}"><span class="nav-text">Passionate About Development</span></a></li>
+    <li><a href="{% url 'devsecops' %}"><span class="nav-text">Driving DevSecOps</span></a></li>
+    <li><a class = "active" href="{% url 'community' %}"><span class="nav-text">Invested In Community</span></a></li>
+    <li><a href="{% url 'portfolio' %}"><span class="nav-text">My Portfolio</span></a></li>
+    <li><a href="{% url 'contact' %}"><span class="nav-text">Contact Me</span></a></li>
+{% endblock %}
 
-        <!-- NAVIGATION -->
-        <div id="navWrapper">
-            <nav class="clearfix">
-                <button onclick="toggleMenu()">&#9776</button>
-                <ul id="primaryNav" class="hide">
-                    <li><a href="{% url 'welcome' %}"><span class="nav-text">Welcome!</span><figure class="logo"><img src="../../static/resume_website/images/Lizard.tiny-purple.png"></figure></a></li>
-                    <li><a href="{% url 'culture' %}"><span class="nav-text">Caring About Culture</span></a></li>
-                    <li><a href="{% url 'development' %}"><span class="nav-text">Passionate About Development</span></a></li>
-                    <li><a href="{% url 'devsecops' %}"><span class="nav-text">Driving DevSecOps</span></a></li>
-                    <li><a class = "active" href="{% url 'community' %}"><span class="nav-text">Invested In Community</span></a></li>
-                    <li><a href="{% url 'portfolio' %}"><span class="nav-text">My Portfolio</span></a></li>
-                    <li><a href="{% url 'contact' %}"><span class="nav-text">Contact Me</span></a></li>
-                </ul>
-            </nav>
-        </div>
+{% block page_titles %}
+    <h1>Involvement</h1>
+{% endblock %}
 
-<!--- Content -->
-        <div id="headingsTopWrapper">
-            <h1>Hire Salem Forsythe</h1>
-            <h2>Software Developer and Automation Engineer</h2>
-        </div>
-    </header>
-</div>
+{% block section_titles_1 %}
+    <h2 id="events" style="text-align: left;">Local Development Community Events</h2>
+{% endblock %}
 
-<!-- MAIN -->
-<div id="mainWrapper">
-    <main>
-        <h1>Involvement</h1>
-        <br>
-        <h2 id="events" style="text-align: left;">Local Development Community Events</h2>
-        <ul>
-            <li>Prior to the pandemic, I would actively seek out tech events, hackathons, and other meetups where I could give back to the community, and as I transition back into the industry, I would like to do that again.</li>
-            <li>I enjoyed tech meetups with such groups as Women in Tech Cape Town, Kat-O (electronics), PythonSA, and Codebridge as well as the monthly Make Games SA meetups.</li>
-            <li>I'm always on the lookout for new and interesting tech events to participate in, such as ScaleConf, DevConf and BSides, and participating in a Make event on Root’s insurance and programmable bank account APIs.</li>
-            <li>Some other hackathons and game jams I have participated in include the Santam IOT Safety Hackathon, Unearthed Mining Hackathon and the Global Game Jams, Amaze Johannesburg, Super Friendship Arcade, SA Game Jam events, and others.</li>
-        </ul>
-        <h2 id="causes" style="text-align: left;">Contributing To Local Causes</h2>
-        <ul>
-            <li>I feel it is important to support the community as a developer, to help bridge the gap experienced by many people not privileged to be afforded the same access to opportunity - with WhereIsMyTransport I've volunteered developer support through our Public Transport API at a hackathon co-hosted with Women In Tech in 2017.</li>
-            <li>In 2016/2017 I volunteered in several events as a code coach, speaker, and mentor at Code4CT, an organisation that teaches underprivileged girls to code, both on behalf of WhereIsMyTransport and also later in my personal capacity, as I have a strong passion for increasing diversity in the software, tech, and games industries.</li>
-            <li>I was also invited to speak on a panel at Life Choices, an event aimed more generally at helping people in other industries transition into software careers.</li>
-            <li>When I had the time I was involved in Tech-for-Good and Coding Soup, a biweekly initiative by the non-profit Codebridge centred around making community data more widely available to the public. I also became involved in ColorCode - a biweekly meetup that encourages collaboration, supporting new developers and those keen to pivot in their coding careers.</li>
-        </ul>
-        <br>
-        <div class="call-to-action-block">
-            <p>Click below to learn more about: </p>
-            <div class="centred-block">
-                <ul class = centred-list-block>
-                    <li><a href="{% url 'welcome' %}">Welcome and Overview</a></li>
-                    <li><a href="{% url 'culture' %}">Culture and Practices: What I'm Seeking</a></li>
-                    <li><a href="{% url 'development' %}">Development and Teamwork: What Motivates Me</a></li>
-                    <li><a href="{% url 'devsecops' %}">DevSecOps: What I've Brought to Teams</a></li>
-                    <!-- <li><a class = "active" href="{% url 'community' %}">Causes and Community: How I Get Involved</a></li> --> <!-- Disable active or extra page bottom links until/unless can fix responsive flex to fit 5+ on screen-->
-                </ul>
-            </div>
-            <br>
-            <ul id="cta-bottom-line" class="icon-and-text">
-                <li><span class="icon-text"><span class="not-bold">Or </span> download my</span></li>
-                <li><span class="icon-emoji"><strong>📄</strong></span></li>
-                <li><span class="icon-text"><a href="https://docs.google.com/document/d/1CLSz0UQYntpxOHxoO1TDGx_cF8VJgf2-kEORt9IYtPc/edit?usp=sharing" target="_blank">resumé</a><span class="not-bold"> (which includes this information and more), </span>view my </span></li>
-                <li><span class="icon-emoji"><strong>📂</strong></span></li>
-                <li><span class="icon-text"><a href="{% url 'portfolio' %}">portfolio </a><span class="not-bold"> or </span>get in</span></li>
-                <li><span class="icon-emoji"><strong>📨</strong></span></li>
-                <li><span class="icon-text"><a href="{% url 'contact' %}">contact</a>!</span></li>
-            </ul>
-        </div>
-    </main>
-</div>
+{% block section_1 %}
+    <ul>
+        <li>Prior to the pandemic, I would actively seek out tech events, hackathons, and other meetups where I could give back to the community, and as I transition back into the industry, I would like to do that again.</li>
+        <li>I enjoyed tech meetups with such groups as Women in Tech Cape Town, Kat-O (electronics), PythonSA, and Codebridge as well as the monthly Make Games SA meetups.</li>
+        <li>I'm always on the lookout for new and interesting tech events to participate in, such as ScaleConf, DevConf and BSides, and participating in a Make event on Root’s insurance and programmable bank account APIs.</li>
+        <li>Some other hackathons and game jams I have participated in include the Santam IOT Safety Hackathon, Unearthed Mining Hackathon and the Global Game Jams, Amaze Johannesburg, Super Friendship Arcade, SA Game Jam events, and others.</li>
+    </ul>
+{% endblock %}
 
-<!--- FOOTER -->
-<div id="footerWrapper">
-    <footer>
-        &copy; Salem Forsythe 2023
-    </footer>
-</div>
-<script src="../../static/resume_website/js/scripts.js"></script>
-</body>
-</html>
+{% block section_titles_2 %}
+    <h2 id="causes" style="text-align: left;">Contributing To Local Causes</h2>
+{% endblock %}
+
+{% block section_2 %}
+    <ul>
+        <li>I feel it is important to support the community as a developer, to help bridge the gap experienced by many people not privileged to be afforded the same access to opportunity - with WhereIsMyTransport I've volunteered developer support through our Public Transport API at a hackathon co-hosted with Women In Tech in 2017.</li>
+        <li>In 2016/2017 I volunteered in several events as a code coach, speaker, and mentor at Code4CT, an organisation that teaches underprivileged girls to code, both on behalf of WhereIsMyTransport and also later in my personal capacity, as I have a strong passion for increasing diversity in the software, tech, and games industries.</li>
+        <li>I was also invited to speak on a panel at Life Choices, an event aimed more generally at helping people in other industries transition into software careers.</li>
+        <li>When I had the time I was involved in Tech-for-Good and Coding Soup, a biweekly initiative by the non-profit Codebridge centred around making community data more widely available to the public. I also became involved in ColorCode - a biweekly meetup that encourages collaboration, supporting new developers and those keen to pivot in their coding careers.</li>
+    </ul>
+{% endblock %}
+
+{% block cta_items %}
+    <li><a href="{% url 'welcome' %}">Welcome and Overview</a></li>
+    <li><a href="{% url 'culture' %}">Culture and Practices: What I'm Seeking</a></li>
+    <li><a href="{% url 'development' %}">Development and Teamwork: What Motivates Me</a></li>
+    <li><a href="{% url 'devsecops' %}">DevSecOps: What I've Brought to Teams</a></li>
+    <!-- <li><a class = "active" href="{% url 'community' %}">Causes and Community: How I Get Involved</a></li> --> <!-- Disable active or extra page bottom links until/unless can fix responsive flex to fit 5+ on screen-->
+{% endblock %}
+
+{% block cta_line %}
+    <li><span class="icon-text"><span class="not-bold">Or </span> download my</span></li>
+    <li><span class="icon-emoji"><strong>📄</strong></span></li>
+    <li><span class="icon-text"><a href="https://docs.google.com/document/d/1CLSz0UQYntpxOHxoO1TDGx_cF8VJgf2-kEORt9IYtPc/edit?usp=sharing" target="_blank">resumé</a><span class="not-bold"> (which includes this information and more), </span>view my </span></li>
+    <li><span class="icon-emoji"><strong>📂</strong></span></li>
+    <li><span class="icon-text"><a href="{% url 'portfolio' %}">portfolio </a><span class="not-bold"> or </span>get in</span></li>
+    <li><span class="icon-emoji"><strong>📨</strong></span></li>
+    <li><span class="icon-text"><a href="{% url 'contact' %}">contact</a>!</span></li>
+{% endblock %}

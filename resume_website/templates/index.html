@@ -1,120 +1,67 @@
-<!DOCTYPE html>
-<html lang = en-us>
-{% load static %}
-<head>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta property="og:image" content="https://salemandreus.github.io/images/SalemandreusDevLogo.png" /> <!--Todo: update -->
-<meta property="og:title" content="Salem Forsythe - Full-Stack Software Developer and Automation Engineer" />
-<meta property="og:description" content="I have worked in DevSecOps, Django/Python and other full-stack and back-end development and automation. My ideal career involves growth opportunities and my dream is to combine my Linguistics degree with AI and Machine Learning." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://salemandreus.github.io/" />
-<meta name="image" content="../../static/resume_website/images/SalemandreusDevLogo.png">
-<meta name="title" content="Salem Forsythe - Full-Stack Software Developer and Automation Engineer">
-<meta name="description" content="I have worked in DevSecOps, Django/Python and other full-stack and back-end development and automation. My ideal career involves growth opportunities and my dream is to combine my Linguistics degree with AI and Machine Learning.">
-<meta name="author" content="Salem Forsythe">
-<link href="../../static/resume_website/css/normalize.css" rel="stylesheet">
-<link href="../../static/resume_website/css/small.css" rel="stylesheet">
-<link href="../../static/resume_website/css/medium.css" rel="stylesheet">
-<link href="../../static/resume_website/css/large.css" rel="stylesheet">
-<title>Hire Salem Forsythe</title>
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
+{% extends "base.html" %}
 
-<body>
-<!-- HEADER -->
-<div id="headerWrapper">
-    <header>
+{% block nav_items %}
+    <li><a class = "active" href="{% url 'welcome' %}"><span class="nav-text">Welcome!</span><figure class="logo"><img src="../../static/resume_website/images/Lizard.tiny-blue-active.png"></figure></a></li>
+    <li><a href="{% url 'culture' %}"><span class="nav-text">Caring About Culture</span></a></li>
+    <li><a href="{% url 'development' %}"><span class="nav-text">Passionate About Development</span></a></li>
+    <li><a href="{% url 'devsecops' %}"><span class="nav-text">Driving DevSecOps</span></a></li>
+    <li><a href="{% url 'community' %}"><span class="nav-text">Invested In Community</span></a></li>
+    <li><a href="{% url 'portfolio' %}"><span class="nav-text">My Portfolio</span></a></li>
+    <li><a href="{% url 'contact' %}"><span class="nav-text">Contact Me</span></a></li>
+{% endblock %}
 
-        <!-- NAVIGATION -->
-        <div id="navWrapper">
-            <nav class="clearfix">
-                <button onclick="toggleMenu()">&#9776</button>
-                <ul id="primaryNav" class="hide">
-                    <li><a class = "active" href="{% url 'welcome' %}"><span class="nav-text">Welcome!</span><figure class="logo"><img src="../../static/resume_website/images/Lizard.tiny-blue-active.png"></figure></a></li>
-                    <li><a href="{% url 'culture' %}"><span class="nav-text">Caring About Culture</span></a></li>
-                    <li><a href="{% url 'development' %}"><span class="nav-text">Passionate About Development</span></a></li>
-                    <li><a href="{% url 'devsecops' %}"><span class="nav-text">Driving DevSecOps</span></a></li>
-                    <li><a href="{% url 'community' %}"><span class="nav-text">Invested In Community</span></a></li>
-                    <li><a href="{% url 'portfolio' %}"><span class="nav-text">My Portfolio</span></a></li>
-                    <li><a href="{% url 'contact' %}"><span class="nav-text">Contact Me</span></a></li>
-                </ul>
-            </nav>
-        </div>
-
-<!--- Content -->
-        <div id="headingsTopWrapper">
-            <h1>Hire Salem Forsythe</h1>
-            <h2>Software Developer and Automation Engineer</h2>
-        </div>
-    </header>
-</div>
-
-<!-- MAIN -->
-<div id="mainWrapper">
-    <main>
+{% block page_titles %}
         <h1>Welcome to my Resumé Website!</h1>
-        <br>
-        <h2 id="overview" style="text-align: left;">I am a Full-Stack Developer and Automation Engineer</h2>
-        <ul>
-            <li><strong><u>I Have</u>:</strong> over <strong>5 years' total software industry experience</strong>, incorporating (with some overlap):</li>
-        <ul class=bulleted-list>
-            <!--appears visually as a "sublist" of the unbulleted <li>-->
-            <li><strong>Software Development:</strong> (2 ½ - 3 years)</li>
-            <li class="bulleted-sublist"><strong>Full-Stack</strong> and <strong>Back-End</strong> Development</li>
-            <li class="bulleted-sublist">Primarily on <strong>Linux</strong> using <strong>Linux stack</strong> technologies</li>
-            <li class="bulleted-sublist"><strong>Python, Django</strong> and <strong>DRF</strong></li>
-            <li class="bulleted-sublist"><strong>Javascript/Typescript</strong>, <strong>Node.js</strong></li>
-            <li class="bulleted-sublist">Some <strong>C#/.NET</strong> experience.</strong></li>
-            <li><strong>Deployment and Cloud Automation Engineering:</strong> (2 ½ - 3 years)</li>
-            <li class="bulleted-sublist">Primarily <strong>Powershell</strong> scripting.</li>
-            <li class="bulleted-sublist">Primarily on <strong>Windows/Azure DevOps</strong> stack.</li>
-            <li><strong>UX Design:</strong> (6½ months)</li>
-        </ul>
-        </ul>
-        <ul>
-            <li><strong><u>My Ideal Position</u>:</strong> offers <strong>mentoring</strong> and <strong>opportunities for growth</strong>.</li>
-            <li><strong><u>My Ideal Environment</u>:</strong> values <a href="{% url 'culture' %}">this</a> type of <strong>culture</strong> and <strong>development practices</strong>, is remote-friendly and flexible.</li>
-            <li><strong><u>I Am Particularly Interested In</u>:</strong></li>
-            <ul class=bulleted-list>
-                <li>More opportunities to work in <strong>Python</strong> on <strong>Linux</strong></li>
-                <li>Pivoting to use my <strong>Linguistics</strong> degree with <strong>AI</strong></li>
-                <li>A role in <strong>DevSecOps</strong>, which I am also passionate about.</li>
-            </ul>
-        </ul>
-        <br>
-        <div class="call-to-action-block">
-            <p>Click below to learn more about: </p>
-            <div class="centred-block">
-                <ul class = centred-list-block>
-                    <!--<li><a class = "active" href="{% url 'welcome' %}">Welcome and Overview</a></li>--> <!-- Disable active or extra page bottom links until/unless can fix responsive flex to fit 5+ on screen-->
-                    <li><a href="{% url 'culture' %}">Culture and Practices: What I'm Seeking</a></li>
-                    <li><a href="{% url 'development' %}">Development and Teamwork: What Motivates Me</a></li>
-                    <li><a href="{% url 'devsecops' %}">DevSecOps: What I've Brought to Teams</a></li>
-                    <li><a href="{% url 'community' %}">Causes and Community: How I Get Involved</a></li>
-                </ul>
-            </div>
-            <br>
-            <ul id="cta-bottom-line" class="icon-and-text">
-                <li><span class="icon-text"><span class="not-bold">Or </span> download my</span></li>
-                <li><span class="icon-emoji"><strong>📄</strong></span></li>
-                <li><span class="icon-text"><a href="https://docs.google.com/document/d/1CLSz0UQYntpxOHxoO1TDGx_cF8VJgf2-kEORt9IYtPc/edit?usp=sharing" target="_blank">resumé</a><span class="not-bold"> (which includes this information and more), </span>view my </span></li>
-                <li><span class="icon-emoji"><strong>📂</strong></span></li>
-                <li><span class="icon-text"><a href="{% url 'portfolio' %}">portfolio </a><span class="not-bold"> or </span>get in</span></li>
-                <li><span class="icon-emoji"><strong>📨</strong></span></li>
-                <li><span class="icon-text"><a href="{% url 'contact' %}">contact</a>!</span></li>
-            </ul>
-        </div>
-    </main>
-</div>
+{% endblock %}
 
-<!--- FOOTER -->
-<div id="footerWrapper">
-    <footer>
-        &copy; Salem Forsythe 2023
-    </footer>
-</div>
-<script src="../../static/resume_website/js/scripts.js"></script>
-</body>
-</html>
+{% block section_titles_1 %}
+    <h2 id="overview" style="text-align: left;">I am a Full-Stack Developer and Automation Engineer</h2>
+{% endblock %}
+
+{% block section_1 %}
+    <ul>
+        <li><strong><u>I Have</u>:</strong> over <strong>5 years' total software industry experience</strong>, incorporating (with some overlap):</li>
+    <ul class=bulleted-list>
+        <!--appears visually as a "sublist" of the unbulleted <li>-->
+        <li><strong>Software Development:</strong> (2 ½ - 3 years)</li>
+        <li class="bulleted-sublist"><strong>Full-Stack</strong> and <strong>Back-End</strong> Development</li>
+        <li class="bulleted-sublist">Primarily on <strong>Linux</strong> using <strong>Linux stack</strong> technologies</li>
+        <li class="bulleted-sublist"><strong>Python, Django</strong> and <strong>DRF</strong></li>
+        <li class="bulleted-sublist"><strong>Javascript/Typescript</strong>, <strong>Node.js</strong></li>
+        <li class="bulleted-sublist">Some <strong>C#/.NET</strong> experience.</strong></li>
+        <li><strong>Deployment and Cloud Automation Engineering:</strong> (2 ½ - 3 years)</li>
+        <li class="bulleted-sublist">Primarily <strong>Powershell</strong> scripting.</li>
+        <li class="bulleted-sublist">Primarily on <strong>Windows/Azure DevOps</strong> stack.</li>
+        <li><strong>UX Design:</strong> (6½ months)</li>
+    </ul>
+    </ul>
+    <ul>
+        <li><strong><u>My Ideal Position</u>:</strong> offers <strong>mentoring</strong> and <strong>opportunities for growth</strong>.</li>
+        <li><strong><u>My Ideal Environment</u>:</strong> values <a href="{% url 'culture' %}">this</a> type of <strong>culture</strong> and <strong>development practices</strong>, is remote-friendly and flexible.</li>
+        <li><strong><u>I Am Particularly Interested In</u>:</strong></li>
+        <ul class=bulleted-list>
+            <li>More opportunities to work in <strong>Python</strong> on <strong>Linux</strong></li>
+            <li>Pivoting to use my <strong>Linguistics</strong> degree with <strong>AI</strong></li>
+            <li>A role in <strong>DevSecOps</strong>, which I am also passionate about.</li>
+        </ul>
+    </ul>
+{% endblock %}
+
+{% block cta_items %}
+    <!--<li><a class = "active" href="{% url 'welcome' %}">Welcome and Overview</a></li>--> <!-- Disable active or extra page bottom links until/unless can fix responsive flex to fit 5+ on screen-->
+    <li><a href="{% url 'culture' %}">Culture and Practices: What I'm Seeking</a></li>
+    <li><a href="{% url 'development' %}">Development and Teamwork: What Motivates Me</a></li>
+    <li><a href="{% url 'devsecops' %}">DevSecOps: What I've Brought to Teams</a></li>
+    <li><a href="{% url 'community' %}">Causes and Community: How I Get Involved</a></li>
+{% endblock %}
+
+{% block cta_line %}
+    <ul id="cta-bottom-line" class="icon-and-text">
+        <li><span class="icon-text"><span class="not-bold">Or </span> download my</span></li>
+        <li><span class="icon-emoji"><strong>📄</strong></span></li>
+        <li><span class="icon-text"><a href="https://docs.google.com/document/d/1CLSz0UQYntpxOHxoO1TDGx_cF8VJgf2-kEORt9IYtPc/edit?usp=sharing" target="_blank">resumé</a><span class="not-bold"> (which includes this information and more), </span>view my </span></li>
+        <li><span class="icon-emoji"><strong>📂</strong></span></li>
+        <li><span class="icon-text"><a href="{% url 'portfolio' %}">portfolio </a><span class="not-bold"> or </span>get in</span></li>
+        <li><span class="icon-emoji"><strong>📨</strong></span></li>
+        <li><span class="icon-text"><a href="{% url 'contact' %}">contact</a>!</span></li>
+{% endblock %}
