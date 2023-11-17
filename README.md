@@ -1,5 +1,7 @@
-## My Resumé Website.
+## My Resumé Website, now in Django.
 
 This is my resumé website, which I host on Github as my user/organization site.
 
-You can view it live [here](https://salemandreus.github.io) .
+The Django version isn't currently hosted live (GitHub Pages doesn't support that).
+
+You can view the static GitHub Pages version [here](https://salemandreus.github.io) .
